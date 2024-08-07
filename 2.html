@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch between light and dark mode</title>
+</head>
+<body>
+    <h1>This is Light Mode</h1>
+    <button onclick="changeTheme()" class="tog">Toggle theme</button>
+    <script>
+        const text = document.querySelector('h1');
+        
+        function changeTheme(){
+            const color = document.body.style.backgroundColor;
+            if(color == "black")
+            {
+                document.body.style.backgroundColor ="White";
+                text.innerHTML = 'This is Light Mode';
+                text.style.color="black"
+            }
+            else
+            {
+                document.body.style.backgroundColor ="black";
+                text.innerHTML = 'This is Dark Mode';
+                text.style.color="white"
+            }
+        }
+
+    </script>
+</body>
+</html>

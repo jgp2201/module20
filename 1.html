@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>import file from system</title>
+</head>
+<body>
+    <h1>Update profile picture</h1>
+    <input id="file-picker" type="file" onchange="updateprofile()" >
+    <h2>Your profile picture</h2>
+    <img style="width: 300px;" id="image" src="" alt="No profile picture">
+    <script>
+        const filepicker= document.getElementById("file-picker");
+        const image = document.getElementById("image");
+
+        function updateprofile(){
+        
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          image.src = e.target.result;
+        };
+        reader.readAsDataURL(filepicker.files[0]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image toggling</title>
+    <style>
+        img{
+            margin-top: 20px;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your image is visible</h1>
+    <button onclick="changeImage()">Toggle image</button> <br>
+    <img src="https://th.bing.com/th/id/OIP.9Izv-aszItToTtEqRMSE0QHaE6?w=261&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+    <script>
+        const head = document.querySelector('h1');
+        const image = document.querySelector('img');
+        function changeImage(){
+            if( image.style.opacity==1)
+            {
+                head.innerText = "Your image is hidden";
+                image.style.opacity=0;
+            }
+            else{
+                head.innerText = "Your image is visible";
+                image.style.opacity=1;
+            }
+        }
+    </script>
+</body>
+</html>

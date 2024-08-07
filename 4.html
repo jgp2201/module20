@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up validation</title>
+    <style>
+        .sign{
+            margin: 0px 40%;
+        }
+        .in{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign">
+        <div>
+            <h1>
+                Sign Up Form
+            </h1>
+        </div>
+        <div>
+            <div class="in">Name : <input type="text" placeholder="(min 3 characters)" name="" id="na"></div>
+            <div class="in">Email : <input type="password" placeholder="Enter your email" name="" id="em"></div>
+            <div class="in">Password : <input type="password" placeholder="(min 8 characters)" name="" id="pass"></div>
+            <button onclick="sub()">Submit</button>
+        </div>
+    </div>
+    <script>
+
+        const name = document.getElementById('na');
+        const email = document.getElementById('em');
+        const password = document.getElementById('pass');
+        function sub(){
+            if(name.value.length>=3 && password.value.length>=8)
+            {
+                alert('Form Validation successful');
+            } 
+            else{
+                alert('Form Validation failed');
+            }
+        }
+    </script>
+</body>
+</html>
